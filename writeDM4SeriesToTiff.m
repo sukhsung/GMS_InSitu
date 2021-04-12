@@ -37,7 +37,7 @@ function writeDM4SeriesToTiff(source_dir, save_dir, dataname, image_scale)
         ind = ind+1;
     end 
     
-    tiffObj = Tiff( fullfile(save_dir, dataname,'.tif'), 'w8'); %w8: tag for writing BigTIFF
+    tiffObj = Tiff( fullfile(save_dir, [dataname,'.tif']), 'w8'); %w8: tag for writing BigTIFF
     % Tiff Tags
     tagstruct.Photometric = Tiff.Photometric.MinIsBlack;    %0 is black
     tagstruct.Compression = Tiff.Compression.None;           %Lossless LZW Compression
